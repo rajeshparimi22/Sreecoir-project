@@ -1,0 +1,72 @@
+What’s inside (high level)
+
+frontend-static/ — Static HTML/CSS/JS site (ready for GitHub Pages or a simple static host). Contact form posts to http://localhost:4000/api/contact by default.
+
+react-app/ — Simple React app (Vite-style), ready to npm install and npm run dev.
+
+backend/ — Node + Express server with a simple SQLite DB and init_db.js to create data/contacts.db. Endpoints:
+
+POST /api/contact — save a contact
+
+GET /api/contacts — list saved contacts
+
+database/init.sql — SQL to create the contacts table (alternative DB).
+
+Top-level README.md — run & deploy instructions, plus notes on replacing placeholder content.
+
+.gitignore, LICENSE
+
+Download the full project zip:
+Download the project zip
+
+Quick next steps (I included in README but repeating for convenience)
+
+Unzip and inspect files locally.
+
+To run backend:
+
+cd backend
+
+npm install
+
+node init_db.js (creates data/contacts.db)
+
+node server.js (starts at http://localhost:4000)
+
+To run static frontend:
+
+cd frontend-static
+
+npx http-server -c-1 -p 8080 (or open index.html directly)
+
+Visit http://localhost:8080
+
+To run React frontend:
+
+cd react-app
+
+npm install
+
+npm run dev (Vite dev server; URL printed in terminal)
+
+How to make it live (options)
+
+Static site: push frontend-static/ to a GitHub repo and enable GitHub Pages, or deploy to Netlify/Vercel.
+
+React app: push react-app/ to GitHub and connect to Vercel/Netlify for automatic deploys (or build and serve the dist/).
+
+Backend: deploy backend/ to Render / Railway / Fly / Heroku (each supports Node apps). After deploying backend, update API_BASE in frontend-static/script.js (and React app if you connect it) to point to your deployed backend URL.
+
+Notes & disclaimers
+
+I built placeholder content and structure inspired by the referenced site — not a pixel-perfect copy and not copy-pasting any proprietary text or images. Replace all content, logos, images, and legal text before publishing.
+
+I cannot push a repo to your GitHub account or host the site publicly from here. I provided everything you need to create the GitHub repo and deploy it live yourself; README contains step-by-step notes.
+
+If you want, I can:
+
+generate a ready-to-run Dockerfile and docker-compose.yml for one-command local runs,
+
+create a GitHub action workflow to auto-deploy static site to GitHub Pages or React app to Vercel,
+
+or customize the content (replace placeholders with exact copy/images from the site you referenced) — tell me which of these you'd like and I’ll update the files inside the project and give you a new zip.
