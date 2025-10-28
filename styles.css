@@ -1,0 +1,14 @@
+
+:root{--gap:16px;--max:1100px;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;color:#222;line-height:1.5}
+.container{max-width:var(--max);margin:0 auto;padding:24px}
+header.site-header{background:#0b6623;color:#fff;padding:12px 0}
+header .brand{display:inline-block;margin:0;font-size:20px}
+header nav{float:right}
+header nav a{color:#fff;margin-left:14px;text-decoration:none}
+.hero{padding:48px 24px;background:linear-gradient(90deg,#e9f7ef,#ffffff)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+.card{border:1px solid #eee;padding:12px;border-radius:8px;background:#fff}
+form input, form textarea{display:block;width:100%;padding:8px;margin:8px 0;border:1px solid #ccc;border-radius:6px}
+button{background:#0b6623;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+footer.site-footer{background:#f4f4f4;padding:12px;margin-top:24px;text-align:center}
